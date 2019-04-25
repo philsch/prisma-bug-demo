@@ -1,0 +1,17 @@
+
+type User{
+    id: ID! @id
+    name: String!
+    posts: [Post]
+}
+
+type Post @embedded {
+    id: ID! @id
+    text: String!
+    comments: [Comment]
+}
+
+type Comment @embedded{
+    id: ID! @id
+    text: String
+}
